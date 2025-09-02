@@ -44,7 +44,7 @@ export default function About() {
               deletionSpeed={30}
               repeat={Infinity}
               cursor={true}
-              style={{ color: "#8245ec"}}
+              style={{ color: "#8245ec" }}
             />
           </h3>
           <p className="text-base sm:text-lg md:text:lg text-gray-400 mb-10 mt-8 leading-relaxed">

@@ -18,7 +18,6 @@ export default function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  
 
   // Smooth scroll function
   const handleMenuIteamClick = (sectionId) => {
