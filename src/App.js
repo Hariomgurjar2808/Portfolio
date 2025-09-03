@@ -1,7 +1,7 @@
-import Home from "./Home";
+import Heropage from "./Heropage";
 
 function App() {
-  return <Home />;
+  return <Heropage/>;
 }
 
 export default App;

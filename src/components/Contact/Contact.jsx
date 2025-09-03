@@ -2,6 +2,15 @@ import React from 'react'
 
 export default function Contact() {
   return (
-    <div>Contact</div>
+    <div 
+    className='h-screen bg-red-500'
+    >Contact
+
+
+
+
+
+      vfuijyyujhyti7y
+    </div>
   )
 }

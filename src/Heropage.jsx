@@ -1,13 +1,14 @@
 import About from "./components/About/About";
-// import Contact from "./components/Contact/Contact";
+import Contact from "./components/Contact/Contact";
 import Education from "./components/Education/Education";
 import Experience from "./components/Experience/Experience";
 // import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import Projects from "./components/Projects/Project";
 import Skills from "./components/Skills/Skill";
+import Home from "./components/Home/Home";
 
-export default function Home() {
+export default function Heropage() {
   return (
     <div className="bg-[#050414]">
       <div
@@ -22,12 +23,13 @@ export default function Home() {
 
       <div className="relative pt-20">
         <Navbar />
+        <Home />
         <About />
         <Skills />
         <Experience />
         <Projects />
         <Education />
-        {/* <Contact /> */}
+        <Contact />
         {/* <Footer />  */}
       </div>
     </div>
