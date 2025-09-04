@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <section
       id="home"
-      className="py-4 px-[7vw] lg:px-[15vw] font-sans mt-16 md:mt-4 lg:mt-28"
+      className="py-4 px-[7vw] lg:px-[15vw] font-sans mt-16 md:mt-4 lg:mt-28 pt-24"
     >
       <div className="flex flex-col-reverse md:flex-row items-center justify-between">
         {/* Left Side */}
@@ -41,7 +41,7 @@ export default function Home() {
                 "Java Developer",
                 2000,
               ]}
-              wrapper="span"
+              wr apper="span"
               speed={50}
               deletionSpeed={30}
               repeat={Infinity}
@@ -60,12 +60,15 @@ export default function Home() {
           {/* Buttons */}
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center md:justify-start">
+
             <a
-              href="#Contact"
-              className="inline-flex items-center gap-2 text-white px-8 py-3 rounded-full text-lg font-bold transition duration-300 hover:scale-105 bg-gradient-to-r from-[#8245ec] to-[#a855f7] shadow-[0_0_2px_#8245ec,0_0_10px_#8245ec,0_0_20px_#8245ec]"
+              href="#contact"
+              className="inline-block px-8 py-3 rounded-full text-lg font-bold text-white bg-gradient-to-r from-[#8245ec] to-[#a855f7] shadow-[0_0_2px_#8245ec,0_0_10px_#8245ec,0_0_20px_#8245ec] transition-transform hover:scale-105"
             >
-              Hire me
-              <LuSend className="w-5 h-5" />
+              <span className="flex items-center gap-2">
+                Hire me
+                <LuSend className="w-5 h-5" />
+              </span>
             </a>
           </div>
         </div>

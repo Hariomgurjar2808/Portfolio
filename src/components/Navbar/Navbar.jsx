@@ -4,14 +4,37 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeSetion, setActiveSection] = useState("");
+  const [activeSection, setActiveSection] = useState("");
   const [isScrolled, setIsScrolled] = useState(false);
 
   // Scroll and navbar background change on scroll
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 100);
+
+      // Scrollspy logic
+      const sectionIds = [
+        "home",
+        "about",
+        "skills",
+        "experience",
+        "projects",
+        "education",
+        "contact",
+      ];
+      let currentSection = sectionIds[0];
+      for (let id of sectionIds) {
+        const section = document.getElementById(id);
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= 120 && rect.bottom > 120) {
+            currentSection = id;
+            break;
+          }
+        }
+      }
+  setActiveSection(currentSection);
     };
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -34,8 +57,8 @@ export default function Navbar() {
     { id: "about", label: "About" },
     { id: "skills", label: "Skills" },
     { id: "experience", label: "Experience" },
-    { id: "education", label: "Education" },
     { id: "projects", label: "Projects" },
+    { id: "education", label: "Education" },
     { id: "contact", label: "Contact" },
   ];
 
@@ -61,7 +84,7 @@ export default function Navbar() {
             <li
               key={item.id}
               className={`cursor-pointer hover:text-[#8245ec] ${
-                activeSetion === item.id ? "text-[#8245ec]" : ""
+                activeSection === item.id ? "text-[#8245ec]" : ""
               }`}
               onClick={() => handleMenuIteamClick(item.id)}
             >
@@ -119,7 +142,7 @@ export default function Navbar() {
               <li
                 key={item.id}
                 className={`cursor-pointer hover:text-white 
-    ${activeSetion === item.id ? "text-[#8245ec]" : ""}`}
+    ${activeSection === item.id ? "text-[#8245ec]" : ""}`}
               >
                 <button onClick={() => handleMenuIteamClick(item.id)}>
                   {item.label}
